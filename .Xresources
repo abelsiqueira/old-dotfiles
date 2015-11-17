@@ -1,13 +1,13 @@
 URxvt.background: rgba:1111/1111/1111/dddd
-URxvt.foreground: white
+URxvt.foreground: green
 URxvt.borderLess: false
 URxvt.transparent: true
 URxvt.shading: 30
-URxvt.font: xft:Inconsolata:size=10
+URxvt.font: xft:Inconsolata:size=12
 URxvt.scrollBar: false
 URxvt.color12: #9999ff
-URxvt.fading: 80
-URxvt.fadeColor: gray
+URxvt.fading: 100
+URxvt.fadeColor: white
 URxvt.saveLines: 5000
 URxvt.internalBorder: 5
 URxvt.pointerColor: black
