@@ -18,3 +18,8 @@ URxvt.keysym.C-minus:  perl:font-size:decglobal
 URxvt.iso14755: false
 URxvt.keysym.C-i: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
+
+
+! I can't see these colors on a black bash
+URxvt*color4: rgb:ffff/7777/0000
+URxvt*color12: rgb:ffff/7777/0000
