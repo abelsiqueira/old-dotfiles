@@ -1,0 +1,12 @@
+# An alternative hardstatus to display a bar at the bottom listing the 
+# windownames and highlighting the current windowname in blue. (This is only
+# enabled if there is no hardstatus setting for your terminal)
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.gk}%-w%{.mk} %n %t %{.gk}%+w %=%{..k} %H %{..k} %c "
+vbell off
+bind + stuff "screen -X chdir \$PWD;screen^M"
+startup_message off
+defscrollback 30000
+termcapinfo xterm ti@:te@
+term screen-256color
