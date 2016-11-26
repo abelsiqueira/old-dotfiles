@@ -87,15 +87,15 @@ if has("autocmd")
   let g:Tex_DefaultTargetFormat='pdf'
 
   "To solve the propleme with vim-latexsuite has with ã and â
-  imap <buffer> <silent> <M-C> <Plug>Tex_MathCal
-  imap <buffer> <silent> <M-B> <Plug>Tex_MathBF
-  imap <buffer> <leader>it <Plug>Tex_InsertItemOnThisLine
-  imap <buffer> <silent> <M-A>  <Plug>Tex_InsertItem
+  "imap <buffer> <silent> <M-C> <Plug>Tex_MathCal
+  "imap <buffer> <silent> <M-B> <Plug>Tex_MathBF
+  "imap <buffer> <leader>it <Plug>Tex_InsertItemOnThisLine
+  "imap <buffer> <silent> <M-A>  <Plug>Tex_InsertItem
   "imap <buffer> <silent> <M-E>  <Plug>Tex_InsertItem
   "imap <buffer> <silent> <M-e>  <Plug>Tex_InsertItemOnThisLine
-  map <buffer> <silent> é é
-  map <buffer> <silent> á á
-  map <buffer> <silent> ã ã
+  "map <buffer> <silent> é é
+  "map <buffer> <silent> á á
+  "map <buffer> <silent> ã ã
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
@@ -163,6 +163,8 @@ if !exists(":DiffOrig")
 		  \ | wincmd p | diffthis
 endif
 
+let g:latex_to_unicode_file_types = ['julia', 'markdown']
+
 set tabstop=2
 set shiftwidth=2
 
@@ -205,6 +207,6 @@ set autoindent
 set smarttab
 
 " Download theme vendetta: https://github.com/evgenyzinoviev/vim-vendetta
-" colorscheme vendetta
+colorscheme vendetta
 
 highlight ShowTrailingWhitespace ctermbg=Red guibg=Red
