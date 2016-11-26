@@ -1,16 +1,17 @@
 URxvt.background: rgba:1111/1111/1111/dddd
-URxvt.foreground: rgb:9999/dddd/ffff
+URxvt.foreground: white
 URxvt.borderLess: false
 URxvt.transparent: true
-URxvt.shading: 100
-URxvt.font: xft:Inconsolata:size=12
+URxvt.shading: 20
+URxvt.font: xft:Inconsolata:size=14
 URxvt.scrollBar: false
-URxvt.fading: 30
-URxvt.fadeColor: black
+URxvt.color12: #9999ff
+URxvt.fading: 80
+URxvt.fadeColor: gray
 URxvt.saveLines: 5000
 URxvt.internalBorder: 5
-URxvt.pointerColor: red
-URxvt.pointerColor2: black
+URxvt.pointerColor: black
+URxvt.pointerColor2: white
 URxvt.perl-ext-common: default,url-select,font-size
 URxvt.url-select.underline: true
 URxvt.keysym.C-equal:  perl:font-size:incglobal
@@ -18,8 +19,3 @@ URxvt.keysym.C-minus:  perl:font-size:decglobal
 URxvt.iso14755: false
 URxvt.keysym.C-i: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/xdg-open
-
-
-! I can't see these colors on a black bash
-URxvt*color4: rgb:ffff/7777/0000
-URxvt*color12: rgb:ffff/7777/0000

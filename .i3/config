@@ -41,12 +41,24 @@ bindsym $mod+Shift+x exec setxkbmap -layout us -variant intl -option caps:swapes
 
 workspace_auto_back_and_forth yes
 
+#exec xrandr --output DVI-D-0 --mode 1920x1080 --output DP1 --mode 1920x1080 --below HDMI-0
+
+workspace 0 output HDMI-0
+workspace 1 output DVI-I-0
+workspace 2 output HDMI-0
+workspace 3 output DVI-I-0
+workspace 4 output HDMI-0
+workspace 5 output DVI-I-0
+workspace 6 output HDMI-0
+workspace 7 output DVI-I-0
+workspace 8 output HDMI-0
+workspace 9 output DVI-I-0
+
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id urxvt
-bindsym $mod+u exec urxvt -fade 0
+bindsym $mod+Return exec urxvt
 
 bindsym $mod+c exec firefox
 bindsym $mod+Shift+v exec nautilus
@@ -147,6 +159,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
+bindsym $mod+u exec terminator
 bindsym $mod+Shift+u exec xrdb ~/.Xresources
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
@@ -189,7 +202,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   mode dock
-  status_command i3status
+  status_command "LANG=pt_BR.UTF-8 i3status"
   mode hide
   colors {
     background #000000
