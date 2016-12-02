@@ -54,8 +54,17 @@ function parse_git_branch() {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
-export PS1="\[$BOLD$CYAN\]\A \[$RESET$WHITE\]\w\n\[${BOLD}${RED}\]\u\[$RESET$RED\]@\[$BOLD$RED\]\h \[$WHITE\]\[$WHITE\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$RED\]\$(parse_git_branch)\[$WHITE\]\$ \[$RESET\]"
-export PS2="\[$YELLOW\]> \[$RESET\]"
+function smiley () {
+  if [ $? == 0 ]; then
+    echo "\[$GREEN\]:)"
+  else
+    echo "\[$RED\]:("
+  fi
+}
+
+export PS1="\[$BOLD$YELLOW\]\t \[$RESET$YELLOW\]\w\n\$([[ \$? == 0 ]] && echo \[$BOLD$GREEN\]:\) || echo \[$BOLD$RED\]:\()\[$WHITE\] \$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$RED\]\$(parse_git_branch)\[$WHITE\]\$ \[$RESET\]"
+export PS2="\[$YELLOW\]→ \[$RESET\]"
+
 
 # ROOT SHELL
 # export PS1="\[$BOLD$RED\]\W \$\[$RESET\] "
