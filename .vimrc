@@ -1,8 +1,6 @@
-" Using vim-plug
-" See https://github.com/junegunn/vim-plug
+" vim-plug - https://github.com/junegunn/vim-plug
 
 call plug#begin('~/.vim/plugged')
-
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-sensible'
 Plug 'JuliaEditorSupport/julia-vim'
@@ -18,25 +16,22 @@ Plug 'parkr/vim-jekyll'
 Plug 'PProvost/vim-markdown-jekyll'
 Plug 'alvan/vim-closetag'
 Plug 'othree/html5.vim'
-
+Plug 'cespare/vim-toml'
 call plug#end()
 
+" Colorscheme
 colorscheme seti
+" No background color for transparency
 hi Normal ctermbg=none
 hi NonText ctermbg=none
 hi Comment ctermfg=gray ctermbg=none
 
-
-set expandtab
-set tabstop=2
-set shiftwidth=2
-set hlsearch
-set ignorecase
-set number
-
+" Additional package configurations
+" Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
-let g:latex_to_unicode_file_types = ['julia', 'markdown', 'conf']
+" Unicode
+let g:latex_to_unicode_file_types = ['julia', 'markdown', 'conf', 'toml']
 map vimrc :e~/.vimrc<ENTER>
 
 if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -62,7 +57,15 @@ let g:vimtex_compiler_latexmk = {'callback' : 0}
 let g:templates_directory = '/home/abel/projetos/templates-for-vim/'
 let g:templates_debug = 1
 
-" Abel personal stuff
+
+" Personal choices
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set hlsearch
+set ignorecase
+set number
+
 map <Tab> >>
 map <S-Tab> <<
 map n nzz

@@ -1,13 +1,9 @@
-# An alternative hardstatus to display a bar at the bottom listing
-# the windownames and highlighting the current windowname in blue.
-# (This is only enabled if there is no hardstatus setting for your
-# terminal)
-
-hardstatus alwayslastline '%{= W}%S%{= d}     %{= Kw}%-Lw%{= KR}%n*%f %t%{= Kw}%+Lw%{= dg}%= %{B}%Y-%m-%d %{W}%c:%s %{g}'
-vbell off
-bind + stuff "screen -X chdir \$PWD;screen^M"
+hardstatus alwayslastline '%{+bBw} %H   %-w%{+urr}%n %t%{-urr}%+w   %= %Y-%m-%d %c:%s'
+backtick 0 1 1 pwd
 startup_message off
 defscrollback 30000
-term screen-256color
-windowlist string "%4n %h%=%f"
+term screen-255color
 altscreen on
+bind + stuff "screen -X chdir \$PWD;screen^M"
+bind ',' prev
+bind '.' next
