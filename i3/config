@@ -420,21 +420,16 @@ mode "$mode_gaps_outer" {
 ### Abel config ###
 ###################
 
+bindsym F6 exec --no-startup-id xrandr --output HDMI-0 --left-of DVI-I-1
+
 bindsym $mod+x       exec setxkbmap -layout us -option caps:swapescape
 bindsym $mod+Shift+x exec setxkbmap -layout us -variant intl -option caps:swapescape
 
-bindsym F6            exec xrandr --output HDMI1 --auto --left-of eDP1
-bindsym $mod+F6       exec xrandr --output HDMI1 --off
-bindsym $mod+Shift+F6 exec xrandr --output HDMI1 --auto --same-as eDP1
-bindsym XF86Display            exec xrandr --output HDMI1 --auto --left-of eDP1
-bindsym $mod+XF86Display       exec xrandr --output HDMI1 --off
-bindsym $mod+Shift+XF86Display exec xrandr --output HDMI1 --auto --same-as eDP1
-
-workspace $ws1 output HDMI1
-workspace $ws2 output eDP1
-workspace $ws3 output HDMI1
-workspace $ws4 output eDP1
-workspace $ws5 output HDMI1
-workspace $ws6 output eDP1
-workspace $ws7 output HDMI1
-workspace $ws8 output eDP1
+workspace $ws1 output HDMI-0
+workspace $ws2 output DVI-I-1
+workspace $ws3 output HDMI-0
+workspace $ws4 output DVI-I-1
+workspace $ws5 output HDMI-0
+workspace $ws6 output DVI-I-1
+workspace $ws7 output HDMI-0
+workspace $ws8 output DVI-I-1

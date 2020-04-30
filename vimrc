@@ -1,37 +1,43 @@
 " vim-plug - https://github.com/junegunn/vim-plug
 
 call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-markdown'
-Plug 'tpope/vim-sensible'
+" Plug 'PProvost/vim-markdown-jekyll'
 Plug 'JuliaEditorSupport/julia-vim'
+Plug 'Shougo/neocomplete'
+Plug 'alvan/vim-closetag'
+Plug 'aperezdc/vim-template'
+Plug 'cespare/vim-toml'
 Plug 'chriskempson/base16-vim'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-commentary'
-Plug 'ntpeters/vim-better-whitespace'
 Plug 'flazz/vim-colorschemes'
 Plug 'lervag/vimtex'
-Plug 'Shougo/neocomplete'
-Plug 'aperezdc/vim-template'
-Plug 'parkr/vim-jekyll'
-Plug 'PProvost/vim-markdown-jekyll'
-Plug 'alvan/vim-closetag'
+Plug 'ntpeters/vim-better-whitespace'
 Plug 'othree/html5.vim'
-Plug 'cespare/vim-toml'
+Plug 'parkr/vim-jekyll'
+Plug 'reedes/vim-colors-pencil'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-sensible'
 call plug#end()
 
 " Colorscheme
-colorscheme seti
+colorscheme apprentice
 " No background color for transparency
 hi Normal ctermbg=none
 hi NonText ctermbg=none
 hi Comment ctermfg=gray ctermbg=none
+" syn region markdownCode matchgroup=markdownCodeDelimiter start="^\s*```*.*$" end="^\s*```*\ze\s*$" keepend
+hi markdownCode ctermfg=green
+" hi markdownCodeBlock ctermfg=red
+" hi markdownHighlight ctermfg=red
 
 " Additional package configurations
 " Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
 " Unicode
-let g:latex_to_unicode_file_types = ['julia', 'markdown', 'conf', 'toml']
+let g:latex_to_unicode_file_types = ['julia', 'jmd', 'markdown', 'conf', 'toml']
 map vimrc :e~/.vimrc<ENTER>
 
 if !exists('g:neocomplete#sources#omni#input_patterns')

@@ -1,4 +1,5 @@
 $pdflatex='pdflatex --shell-escape --enable-write18 -interaction nonstopmode %O %S';
+$lualatex='lualatex -interaction nonstopmode %O %S';
 $pdf_previewer='start evince %O %S';
 $pdf_mode = 1;
 $postscript_mode = 0;

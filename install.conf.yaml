@@ -1,0 +1,27 @@
+- defaults:
+    link:
+      create: true
+      force: true
+      relink: true
+
+- clean: ['~']
+
+
+- link:
+    ~/.bash_aliases: bash_aliases
+    ~/.bash_prompt: bash_prompt
+    ~/.bashrc: bashrc
+    ~/.gitignore_global: gitignore_global
+    ~/.i3/config: i3/config
+    ~/.irssi: irssi
+    ~/.latexmkrc: latexmkrc
+    ~/.screenrc: screenrc
+    ~/.vimrc: vimrc
+    ~/.Xresources: Xresources
+
+- create:
+  - ~/packages
+  - ~/.vim/undo-history
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
