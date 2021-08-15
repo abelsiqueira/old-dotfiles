@@ -18,6 +18,7 @@
     ~/.screenrc: screenrc
     ~/.vimrc: vimrc
     ~/.Xresources: Xresources
+    ~/.zshrc: zshrc
 
 - create:
   - ~/packages
