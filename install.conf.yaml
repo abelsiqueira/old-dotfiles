@@ -8,6 +8,7 @@
 
 
 - link:
+    ~/.Xresources: Xresources
     ~/.bash_aliases: bash_aliases
     ~/.bash_prompt: bash_prompt
     ~/.bashrc: bashrc
@@ -15,9 +16,9 @@
     ~/.i3/config: i3/config
     ~/.irssi: irssi
     ~/.latexmkrc: latexmkrc
+    ~/.oh-my-zsh: oh-my-zsh
     ~/.screenrc: screenrc
     ~/.vimrc: vimrc
-    ~/.Xresources: Xresources
     ~/.zshrc: zshrc
 
 - create:
