@@ -14,6 +14,7 @@ Plug 'aperezdc/vim-template'
 Plug 'cespare/vim-toml'
 Plug 'chriskempson/base16-vim'
 Plug 'flazz/vim-colorschemes'
+Plug 'junegunn/vim-easy-align'
 Plug 'lervag/vimtex'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'othree/html5.vim'
@@ -86,3 +87,6 @@ map n nzz
   \ if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
   \ |   exe "normal! g`\""
   \ | endif
+
+" Align GitHub-flavored Markdown tables
+au FileType markdown vmap <Leader><Bslash> :EasyAlign*<Bar><Enter>

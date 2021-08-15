@@ -6,6 +6,8 @@ setterm -blength 0
 
 export EDITOR="vim"
 PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/vendor_perl:/usr/bin/core_perl"
+PATH="$PATH:~/go/bin"
+export RUBYOPT='-W:no-deprecated'
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -71,7 +73,10 @@ stty -ixon
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
-export GUROBI_HOME="~/packages/gurobi900/linux64"
+#export GUROBI_HOME="/usr/local"
+#export GRB_LICENSE_FILE="~/package/amplide.linux64.ampl.lic"
+export GUROBI_HOME="/home/abel/packages/gurobi912/linux64"
+export GRB_LICENSE_FILE="$GUROBI_HOME/gurobi.lic"
 export PATH="$PATH:$GUROBI_HOME/bin"
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$GUROBI_HOME/lib"
 [ -f ~/.github_auth ] && source ~/.github_auth
@@ -92,3 +97,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+#export ARCHDEFS=/home/abel/.julia/artifacts/c990de2425d3a17849e2f6bbe47decf0f81036d8/libexec/ARCHDefs-2.0.3x
+#export SIFDECODE=/home/abel/.julia/artifacts/c990de2425d3a17849e2f6bbe47decf0f81036d8/libexec/SIFDecode-2.0.3
+#export CUTEST=/home/abel/.julia/artifacts/c990de2425d3a17849e2f6bbe47decf0f81036d8/libexec/CUTEst-2.0.3
+#export MYARCH=pc64.lnx.gfo
+#export MASTSIF=/home/abel/projetos/jso/CUTEst.jl/src/../deps/sif
+#export PATH=${SIFDECODE}/bin:${CUTEST}/bin:${PATH}
+#run_sifdecoder() { bash -c "export LD_LIBRARY_PATH=/home/abel/packages/julias/julia-1.4-latest/bin/../lib/julia:/home/abel/packages/julias/julia-1.4-latest/bin/../lib:/home/abel/.julia/artifacts/0fd0fb67de786e5d7b2eb67181d35e4bcab639cf/lib; source $SIFDECODE/bin/sifdecoder $@"; }
+#run_cutest() { bash -c "export LD_LIBRARY_PATH=/home/abel/packages/julias/julia-1.4-latest/bin/../lib/julia:/home/abel/packages/julias/julia-1.4-latest/bin/../lib:/home/abel/.julia/artifacts/0fd0fb67de786e5d7b2eb67181d35e4bcab639cf/lib; source $CUTEST/bin/runcutest $*"; }

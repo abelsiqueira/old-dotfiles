@@ -4,3 +4,7 @@
 
 *.py[cod]
 *.egg-info
+
+.vscode
+.history
+Manifest.toml
