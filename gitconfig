@@ -1,0 +1,40 @@
+[user]
+	name = Abel Soares Siqueira
+	email = abel.s.siqueira@gmail.com
+[github]
+	user = abelsiqueira
+[color]
+	status = auto
+	branch = auto
+	diff = auto
+	grep = auto
+	ui = true
+[alias]
+  gethash = log -1 --pretty=format:%h
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	last = log -1 HEAD
+	df = diff --color-words
+  lg = log --pretty=format:'%Credcommit %H\n%CgreenAuthor: %an <%ae>\n%C(white)%ad (%ar)\n%C(cyan)%s\n' -3
+  smallgraph = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ad)%C(reset)%C(bold red)%d%C(reset)' --abbrev-commit --date=iso
+  graph = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar, %ai)%C(reset)%C(bold red)%d%C(reset)%n%C(white)%s%C(reset) %C(bold white)%an%C(reset)%n' --abbrev-commit
+  logdate = log --pretty=format:'%Cred%ar: %Cgreen %s'
+[help]
+	autocorrect = 1
+[push]
+	default = simple
+[core]
+	excludesfile = /home/abel/.gitignore_global
+[credential]
+	helper = cache --timeout=800000
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[hub]
+	protocol = https
+[init]
+	defaultBranch = main

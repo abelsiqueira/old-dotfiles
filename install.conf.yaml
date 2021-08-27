@@ -12,8 +12,10 @@
     ~/.bash_aliases: bash_aliases
     ~/.bash_prompt: bash_prompt
     ~/.bashrc: bashrc
+    ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
     ~/.i3/config: i3/config
+    ~/.i3status.conf: i3status.conf
     ~/.irssi: irssi
     ~/.latexmkrc: latexmkrc
     ~/.oh-my-zsh: oh-my-zsh
