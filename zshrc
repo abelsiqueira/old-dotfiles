@@ -20,6 +20,7 @@ alias sort="LC_ALL=C sort"
 alias zshrc="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias c="clear"
+alias vi="vim"
 
 [ -f ~/.github_auth ] && source ~/.github_auth
 
@@ -136,3 +137,7 @@ compinit
 export
 
 prompt_context(){}
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
