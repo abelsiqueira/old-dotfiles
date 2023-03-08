@@ -25,6 +25,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-sensible'
+Plug 'bfrg/vim-cpp-modern'
 call plug#end()
 
 " Colorscheme
