@@ -26,6 +26,7 @@
 [push]
 	default = simple
 [core]
+  editor = vim
 	excludesfile = /home/abel/.gitignore_global
 [credential]
 	helper = cache --timeout=800000

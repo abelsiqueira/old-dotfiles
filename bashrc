@@ -75,3 +75,4 @@ export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 
 [ -f ~/.github_auth ] && source ~/.github_auth
 export PATH="/home/abel/.local/bin:$PATH"
+. "$HOME/.cargo/env"
