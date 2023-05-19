@@ -22,6 +22,7 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias c="clear"
 alias vi="vim"
 alias git-deletable-branches="git branch --merged | grep -v main"
+alias k="kubectl"
 
 [ -f ~/.github_auth ] && source ~/.github_auth
 
@@ -144,6 +145,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+#command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
 #eval "$(pyenv virtualenv-init -)"
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
