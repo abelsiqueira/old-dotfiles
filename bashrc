@@ -58,7 +58,7 @@ else
 fi
 #echo -e "\e[0;32m$USER@$HOSTNAME"
 
-if [ -f ~/.bash_prompt -a -n "$DISPLAY" ]; then
+if [ -f ~/.bash_prompt ]; then
   source ~/.bash_prompt
 else
   PS1='[\t]\w\n\u@\H\$ '
