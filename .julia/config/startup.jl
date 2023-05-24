@@ -6,6 +6,7 @@ if Base.isinteractive() &&
     ENV["EDITOR"] = "code --wait"
     ENV["JULIA_EDITOR"] = "code --wait"
     using Revise
+    using OhMyREPL
 
     # Exit Julia with :q, restart with :r
     pushfirst!(REPL.repl_ast_transforms, function(ast::Union{Expr,Nothing})

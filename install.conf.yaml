@@ -16,6 +16,7 @@
     ~/.gitignore_global: gitignore_global
     ~/.i3/config: i3/config
     ~/.i3status.conf: i3status.conf
+    ~/.julia/config/startup.jl: .julia/config/startup.jl
     ~/.irssi: irssi
     ~/.latexmkrc: latexmkrc
     ~/.oh-my-zsh: oh-my-zsh
