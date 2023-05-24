@@ -62,7 +62,7 @@ function smiley () {
   fi
 }
 
-export PS1="\[$BOLD$YELLOW\]\t \[$RESET$YELLOW\]\w\n\$([[ \$? == 0 ]] && echo \[$BOLD$GREEN\]:\) || echo \[$BOLD$RED\]:\()\[$WHITE\] \$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$RED\]\$(parse_git_branch)\[$WHITE\]\$ \[$RESET\]"
+export PS1="\[$BOLD$YELLOW\]\t $BOLD$MAGENTA\u@\h \[$RESET$YELLOW\]\w\n\$([[ \$? == 0 ]] && echo \[$BOLD$GREEN\]:\) || echo \[$BOLD$RED\]:\()\[$WHITE\] \$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$RED\]\$(parse_git_branch)\[$WHITE\]\$ \[$RESET\]"
 export PS2="\[$YELLOW\]→ \[$RESET\]"
 
 
