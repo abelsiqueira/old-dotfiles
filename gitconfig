@@ -18,8 +18,8 @@
 	last = log -1 HEAD
 	df = diff --color-words
   lg = log --pretty=format:'%Credcommit %H\n%CgreenAuthor: %an <%ae>\n%C(white)%ad (%ar)\n%C(cyan)%s\n' -3
-  smallgraph = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ad)%C(reset)%C(bold red)%d%C(reset)' --abbrev-commit --date=iso
-  graph = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar, %ai)%C(reset)%C(bold red)%d%C(reset)%n%C(white)%s%C(reset) %C(bold white)%an%C(reset)%n' --abbrev-commit
+  smallgraph = log --graph --exclude=refs/remotes/origin/gh-pages --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ad)%C(reset)%C(bold red)%d%C(reset)' --abbrev-commit --date=iso
+  graph = log --graph --exclude=refs/remotes/origin/gh-pages --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar, %ai)%C(reset)%C(bold red)%d%C(reset)%n%C(white)%s%C(reset) %C(bold white)%an%C(reset)%n' --abbrev-commit
   logdate = log --pretty=format:'%Cred%ar: %Cgreen %s'
 [help]
 	autocorrect = 1
