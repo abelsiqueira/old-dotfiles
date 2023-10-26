@@ -10,6 +10,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 # Aliases
 alias q="exit"
+alias cat="bat"
 alias l="ls --group-directories-first"
 alias lsdir="ls -d */"
 alias df="df -Th"
@@ -150,3 +151,4 @@ export NVM_DIR="$HOME/.nvm"
 #eval "$(pyenv virtualenv-init -)"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export TERM=xterm-256color
+export PATH="$HOME/.local/bin:$PATH"

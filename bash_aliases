@@ -47,10 +47,4 @@ alias sort='LC_ALL=C sort'
 alias editbash='vim ~/.bashrc'
 alias editalias='vim ~/.bash_aliases'
 
-alias mkthislst='find . -name "*.mp3" | sort > this.lst'
-alias playmp3='mpg123 -C'
-alias randomplay='mpg123 -CZ'
-alias randomplaythis='mpg123 -CZ --list this.lst'
-alias playthis='mpg123 -C --list this.lst'
-
 alias c='clear'
