@@ -24,6 +24,7 @@
     ~/.screenrc: screenrc
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
+    ~/.wezterm.lua: wezterm.lua
     ~/.zshrc: zshrc
 
 - create:
