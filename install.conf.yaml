@@ -20,6 +20,7 @@
     ~/.julia/config/startup.jl: .julia/config/startup.jl
     ~/.latexmkrc: latexmkrc
     ~/.oh-my-zsh: oh-my-zsh
+    ~/.p10k.zsh: p10k.zsh
     ~/.screenrc: screenrc
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
