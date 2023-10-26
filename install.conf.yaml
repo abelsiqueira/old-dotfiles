@@ -21,6 +21,7 @@
     ~/.latexmkrc: latexmkrc
     ~/.oh-my-zsh: oh-my-zsh
     ~/.screenrc: screenrc
+    ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
 
