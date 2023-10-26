@@ -31,6 +31,7 @@ alias c="clear"
 alias vi="vim"
 alias git-deletable-branches="git branch --merged | grep -v main"
 alias k="kubectl"
+[ -f /usr/bin/nvim ] && alias vim="nvim"
 
 [ -f ~/.github_auth ] && source ~/.github_auth
 

@@ -12,6 +12,7 @@
     ~/.bash_aliases: bash_aliases
     ~/.bash_prompt: bash_prompt
     ~/.bashrc: bashrc
+    ~/.config/nvim: config/nvim
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
     ~/.i3/config: i3/config
@@ -33,3 +34,4 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - [bash setup-neovim.sh]
