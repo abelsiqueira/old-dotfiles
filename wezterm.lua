@@ -12,7 +12,21 @@ end
 
 -- This is where you actually apply your config choices
 -- Colors
-config.color_scheme = "Catppuccin Macchiato"
+function scheme_for_appearance(appearance)
+  if appearance:find("Dark") then
+    return "Catppuccin Macchiato"
+  else
+    return "Catppuccin Latte"
+  end
+end
+local custom_color = wezterm.color.get_builtin_schemes()[scheme_for_appearance(wezterm.gui.get_appearance())]
+custom_color.ansi[3] = "#00b050"
+custom_color.ansi[5] = "#0050a0"
+config.color_schemes = {
+  ["Custom"] = custom_color,
+}
+config.color_scheme = "Custom"
+
 config.enable_scroll_bar = true
 config.min_scroll_bar_height = "2cell"
 -- config.colors = {
@@ -60,7 +74,7 @@ config.background = {
     },
     repeat_x = "Mirror",
     repeat_y = "Mirror",
-    hsb = { brightness = 0.02 },
+    hsb = { brightness = 0.01 },
     attachment = { Parallax = 0.1 },
   },
 }
