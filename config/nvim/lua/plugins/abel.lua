@@ -3,12 +3,12 @@ return {
     -- { "stuff/stuff", enabled = false }
     { "stevearc/conform.nvim", enabled = true },
 
-    -- {
-    --   "ellisonleao/gruvbox.nvim",
-    --   opts = {
-    --     transparent_mode = true,
-    --   },
-    -- },
+    {
+        "ellisonleao/gruvbox.nvim",
+        opts = {
+            transparent_mode = true,
+        },
+    },
     {
         "catppuccin/nvim",
         lazy = false,
@@ -77,6 +77,8 @@ return {
     {
         "mechatroner/rainbow_csv",
     },
+
+    { "akinsho/git-conflict.nvim", version = "*", config = true },
 
     -- {
     --   "michaelb/sniprun",
