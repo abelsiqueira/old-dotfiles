@@ -1,7 +1,22 @@
+vim.g.editorconfig = true
+
 return {
     -- To disable things:
     -- { "stuff/stuff", enabled = false }
-    { "stevearc/conform.nvim", enabled = true },
+    {
+        "stevearc/conform.nvim",
+        enabled = true,
+        lazy = false,
+        opts = {
+
+            formatters_by_ft = {
+                markdown = { "markdownlint" },
+            },
+        },
+    },
+
+    -- Cron explainer. Requires NPM cronstrue
+    { "fabridamicelli/cronex.nvim", opts = {} },
 
     {
         "ellisonleao/gruvbox.nvim",

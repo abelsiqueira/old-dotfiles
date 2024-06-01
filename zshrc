@@ -18,7 +18,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 # Aliases
 alias q="exit"
 alias cat="bat"
-alias l="ls --group-directories-first"
+alias l="ls"
 alias lsdir="ls -d */"
 alias df="df -Th"
 alias du="du -h"
@@ -31,13 +31,12 @@ alias c="clear"
 alias vi="vim"
 alias git-deletable-branches="git branch --merged | grep -v main"
 alias k="kubectl"
-[ -f /usr/bin/nvim ] && alias vim="nvim"
-[ -f /usr/bin/nvim ] && alias vimdiff="nvim -d"
-
-[ -f ~/.github_auth ] && source ~/.github_auth
+alias vim="nvim"
+alias vimdiff="nvim -d"
+alias jlp="julia --project"
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/abel/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -140,7 +139,7 @@ unsetopt beep
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/abel/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -164,3 +163,15 @@ export PATH="$HOME/.local/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/abelsiqueira/.juliaup/bin' $path)
+export PATH
+
+eval $(ssh-agent)
+
+# <<< juliaup initialize <<<

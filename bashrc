@@ -76,3 +76,18 @@ export PATH="$PATH:$(ruby -e 'puts Gem.user_dir')/bin"
 [ -f ~/.github_auth ] && source ~/.github_auth
 export PATH="/home/abel/.local/bin:$PATH"
 . "$HOME/.cargo/env"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/Users/abelsiqueira/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/Users/abelsiqueira/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+
+# <<< juliaup initialize <<<
